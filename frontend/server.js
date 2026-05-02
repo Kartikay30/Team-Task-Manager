@@ -14,7 +14,7 @@ const dist = join(__dirname, "dist");
 app.use(express.static(dist));
 
 // Handle React Router — send all routes to index.html
-app.get("*", (req, res) => {
+app.use((req, res) => {
   res.sendFile(join(dist, "index.html"));
 });
 
