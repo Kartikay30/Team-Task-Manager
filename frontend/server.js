@@ -18,6 +18,6 @@ app.use((req, res) => {
   res.sendFile(join(dist, "index.html"));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`✅ Frontend serving on port ${PORT}`);
 });
