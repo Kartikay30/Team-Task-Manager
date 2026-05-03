@@ -62,6 +62,10 @@ app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const message = err.message || "Internal Server Error";
 
+  // Always log the full error so it appears in Railway logs
+  console.error(`[ERROR] ${req.method} ${req.originalUrl} →`, err.message);
+  if (statusCode === 500) console.error(err.stack);
+
   res.status(statusCode).json({
     success: false,
     statusCode,
