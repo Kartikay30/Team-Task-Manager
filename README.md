@@ -2,7 +2,7 @@
 
 A full-stack team task management app with role-based access control.
 
-**Live Demo:** (optimistic-wholeness-production-86d8.up.railway.app)
+
 
 ---
 
